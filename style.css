@@ -1168,4 +1168,42 @@ ul {
     .copyright {
         text-align: center;
     }
-}
+}/* NETFLIX THEME */
+:root { --netflix-red: #e50914; --netflix-black: #080808; --netflix-panel: #181818; }
+body { background: var(--netflix-black); color: #f5f5f5; }
+.section-alt { background: #111111; }
+.section-heading h2 span, .section-label { color: var(--netflix-red); }
+.btn-primary { background: var(--netflix-red); border-color: var(--netflix-red); color: white; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+.project-card { background: var(--netflix-panel); border: 1px solid #303030; border-radius: 8px; transition: transform .3s ease, box-shadow .3s ease; }
+.project-card:hover { transform: scale(1.035); box-shadow: 0 12px 32px #0009; }
+.skill-card, .resume-box { background: #181818; border-color: #303030; }
+@media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
+/* NETFLIX CINEMATIC HERO */
+.navbar { background: linear-gradient(180deg, #050505 0%, rgba(5,5,5,.88) 70%, transparent 100%); border-bottom: 1px solid rgba(255,255,255,.06); }
+.logo { color: #e50914; font-weight: 900; letter-spacing: 1px; }
+.nav-menu a { color: #e5e5e5; font-size: .92rem; }
+.nav-menu a:hover { color: #e50914; }
+.hero { position: relative; min-height: 78vh; display: flex; align-items: center; background: radial-gradient(ellipse at 75% 45%, rgba(130,0,0,.25), transparent 42%), linear-gradient(90deg, #080808 0%, rgba(8,8,8,.94) 42%, rgba(8,8,8,.48) 100%); overflow: hidden; }
+.hero::after { content: ''; position: absolute; inset: auto 0 0; height: 180px; background: linear-gradient(0deg, #080808, transparent); pointer-events: none; }
+.hero-grid { opacity: .12; }
+.hero-content { position: relative; z-index: 1; max-width: 760px; }
+.hero-intro { color: #e50914; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; }
+.hero-content h1 { font-size: clamp(2.8rem, 6vw, 5.8rem); line-height: 1.04; font-weight: 900; letter-spacing: -2px; text-shadow: 0 5px 28px #000; }
+.hero-content h1 span { color: #e50914; }
+.hero-content h2 { color: #e5e5e5; font-size: clamp(1.1rem, 2vw, 1.55rem); }
+.hero-description { color: #d0d0d0; max-width: 650px; }
+.btn-primary { font-weight: 800; border-radius: 4px; }
+.btn-secondary { background: rgba(109,109,110,.55); border-color: transparent; color: #fff; border-radius: 4px; }
+.btn-secondary:hover { background: rgba(109,109,110,.8); }
+@media (max-width: 600px) { .hero { min-height: 72vh; } .hero-content h1 { letter-spacing: -1px; } }
+/* NETFLIX-STYLE PROJECT ROW */
+.projects-grid { display: flex; gap: 22px; overflow-x: auto; overflow-y: hidden; padding: 18px 4px 28px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #e50914 #181818; }
+.project-card { flex: 0 0 320px; min-width: 280px; scroll-snap-align: start; padding: 26px; }
+.project-card h3 { color: #fff; font-size: 1.3rem; margin: 18px 0 12px; }
+.project-card p { color: #c5c5c5; }
+.project-link { display: inline-block; margin-top: 18px; color: #fff; background: #e50914; padding: 9px 14px; border-radius: 4px; }
+.project-link:hover { background: #b20710; }
+.project-number { color: #e50914; font-weight: 900; }
+.project-card:hover { transform: scale(1.04); }
+@media (max-width: 600px) { .project-card { flex-basis: 82vw; min-width: 0; } }
